@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LankciWorld | Офіційний сайт</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background-color: #0d0d0d; color: #f0f0f0; margin: 0; scroll-behavior: smooth; }
+        header { background: linear-gradient(135deg, #7e22ce, #1a1a1a); padding: 70px 20px; text-align: center; border-bottom: 3px solid #ff0055; }
+        h1 { font-size: 60px; margin: 0; letter-spacing: 3px; color: #fff; text-shadow: 0 0 15px #ff0055; }
+        
+        nav { background: #161616; position: sticky; top: 0; display: flex; justify-content: center; padding: 15px; z-index: 1000; border-bottom: 1px solid #333; align-items: center; }
+        nav a { color: #bbb; text-decoration: none; margin: 0 15px; font-weight: bold; text-transform: uppercase; transition: 0.3s; cursor: pointer; }
+        nav a:hover { color: #ff0055; }
+
+        .lang-switch { margin-left: 30px; display: flex; gap: 10px; }
+        .lang-btn { background: #333; color: white; border: none; padding: 5px 10px; border-radius: 5px; cursor: pointer; font-size: 12px; }
+        .lang-btn.active { background: #ff0055; }
+
+        .container { max-width: 1200px; margin: 30px auto; padding: 20px; }
+        section { background: #111; padding: 40px; border-radius: 20px; margin-bottom: 50px; border: 1px solid #222; }
+        h2 { color: #ff0055; text-align: center; font-size: 36px; margin-bottom: 30px; }
+
+        .donate-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+        .card { background: #1a1a1a; border: 2px solid #333; padding: 30px; border-radius: 15px; text-align: center; transition: 0.4s; }
+        .card:hover { transform: translateY(-10px); box-shadow: 0 10px 20px rgba(0,0,0,0.5); }
+        
+        /* Кольори рамок */
+        .sigma { border-color: #808080; }
+        .tsc { border-color: #eab308; }
+        .dragon { border-color: #3b82f6; }
+        .chosen { border-color: #a855f7; }
+        .darklord { border-color: #ef4444; }
+        .hacker { border-color: #22c55e; background: linear-gradient(180deg, #1a1a1a 0%, #052e16 100%); }
+
+        .price { font-size: 28px; color: #22c55e; font-weight: bold; margin: 20px 0; display: block; }
+        .buy-btn { background: #ff0055; color: white; padding: 12px 25px; text-decoration: none; border-radius: 8px; font-weight: bold; display: inline-block; transition: 0.3s; }
+        .ip-box { background: #000; border: 2px dashed #ff0055; padding: 12px 25px; display: inline-block; margin-top: 25px; cursor: pointer; border-radius: 8px; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>LANKCI WORLD</h1>
+    <div class="ip-box" onclick="alert('IP: LankciWorld.mcsh.io')">IP: LankciWorld.mcsh.io</div>
+</header>
+
+<nav>
+    <a href="#home" class="lang" data-ua="Головна" data-en="Home">Головна</a>
+    <a href="#donate" class="lang" data-ua="Донат" data-en="Donate">Донат</a>
+    <a href="#updates" class="lang" data-ua="Оновлення" data-en="Updates">Оновлення</a>
+    <a href="#rules" class="lang" data-ua="Правила" data-en="Rules">Правила</a>
+    <div class="lang-switch">
+        <button id="btn-ua" class="lang-btn active" onclick="setLang('ua')">UA</button>
+        <button id="btn-en" class="lang-btn" onclick="setLang('en')">EN</button>
+    </div>
+</nav>
+
+<div class="container">
+    <section id="home">
+        <h2 class="lang" data-ua="Вітаємо, Обраний!" data-en="Welcome, Chosen One!">Вітаємо, Обраний!</h2>
+        <p style="text-align: center; font-size: 18px;" class="lang" 
+           data-ua="LankciWorld — це не просто сервер. Це битва титанів. Обери свою сторону та отримай божественну силу." 
+           data-en="LankciWorld is not just a server. It's a battle of titans. Choose your side and gain divine power.">
+           LankciWorld — це не просто сервер. Це битва титанів. Обери свою сторону та отримай божественну силу.
+        </p>
+    </section>
+
+    <section id="donate">
+        <h2 class="lang" data-ua="Магазин Привілеїв" data-en="Privilege Shop">Магазин Привілеїв</h2>
+        <div class="donate-grid">
+            <div class="card sigma">
+                <h3>Sigma</h3>
+                <p class="lang" data-ua="Почуй себе сігмою." data-en="Feel like a sigma.">Почуй себе сігмою.</p>
+                <span class="price">100 грн</span>
+                <a href="https://t.me/your_tg" class="buy-btn lang" data-ua="Придбати" data-en="Buy Now">Придбати</a>
+            </div>
+
+            <div class="card tsc">
+                <h3>The Second Coming</h3>
+                <p class="lang" data-ua="Сила Творця: Політ та унікальні частки." data-en="Creator's Power: Flight and unique particles.">Сила Творця: Політ та унікальні частки.</p>
+                <span class="price">150 грн</span>
+                <a href="https://t.me/your_tg" class="buy-btn lang" data-ua="Придбати" data-en="Buy Now">Придбати</a>
+            </div>
+
+            <div class="card dragon">
+                <h3>Dragon</h3>
+                <p class="lang" data-ua="Дихання дракона: Ефекти вогнестійкості." data-en="Dragon Breath: Fire resistance effects.">Дихання дракона: Ефекти вогнестійкості.</p>
+                <span class="price">110 грн</span>
+                <a href="https://t.me/your_tg" class="buy-btn lang" data-ua="Придбати" data-en="Buy Now">Придбати</a>
+            </div>
+
+            <div class="card chosen">
+                <h3>The Chosen One</h3>
+                <p class="lang" data-ua="Обраний: Сила II та неймовірна швидкість." data-en="Chosen: Strength II and incredible speed.">Обраний: Сила II та неймовірна швидкість.</p>
+                <span class="price">190 грн</span>
+                <a href="https://t.me/your_tg" class="buy-btn lang" data-ua="Придбати" data-en="Buy Now">Придбати</a>
+            </div>
+
+            <div class="card darklord">
+                <h3>The Dark Lord</h3>
+                <p class="lang" data-ua="Володар Темряви: Повна руйнація та влада." data-en="Lord of Darkness: Total destruction and power.">Володар Темряви: Повна руйнація та влада.</p>
+                <span class="price">280 грн</span>
+                <a href="https://t.me/your_tg" class="buy-btn lang" data-ua="Придбати" data-en="Buy Now">Придбати</a>
+            </div>
+
+            <div class="card hacker">
+                <h3>H4CK3R</h3>
+                <p class="lang" data-ua="Адмінські можливості та злам правил!" data-en="Admin abilities and rule breaking!">Адмінські можливості та злам правил!</p>
+                <span class="price">450 грн</span>
+                <a href="https://t.me/your_tg" class="buy-btn lang" data-ua="Придбати" data-en="Buy Now">Придбати</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="updates">
+        <h2 class="lang" data-ua="Новини сервера" data-en="Server News">Новини сервера</h2>
+        <p><b><span class="lang" data-ua="Оновлення 1.2" data-en="Update 1.2">Оновлення 1.2</span>:</b> 
+           <span class="lang" data-ua="Нове лоббі оновлений спавн" data-en="New lobby and updated spawn">Нове лоббі оновлений спавн</span>. <br> 
+           <span class="lang" data-ua="Наступний крок — новий режим!" data-en="Next step — new mode!">Наступний крок — новий режим!</span></p>
+    </section>
+
+    <section id="rules">
+        <h2 class="lang" data-ua="Правила" data-en="Rules">Правила</h2>
+        <p>1. <span class="lang" data-ua="Ніяких читів (навіть для Hacker) бан на 25 дн якщо зізнаєшся то 14 дн." data-en="No cheats (even for Hacker) 25 days ban, 14 days if you confess.">Ніяких читів (навіть для Hacker) бан на 25 дн якщо зізнаєшся то 14 дн.</span><br> 
+           2. <span class="lang" data-ua="Погрожувати адміну або власнику 3 годин муту." data-en="Threatening admin or owner - 3 hours mute.">Погрожувати адміну або власнику 3 годин муту.</span><br> 
+           3. <span class="lang" data-ua="Повага до гравців." data-en="Respect for players.">Повага до гравців.</span></p>
+    </section>
+</div>
+
+<script>
+    function setLang(lang) {
+        document.querySelectorAll('.lang').forEach(el => {
+            el.textContent = el.getAttribute('data-' + lang);
+        });
+        document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+        if(lang === 'ua') document.getElementById('btn-ua').classList.add('active');
+        else document.getElementById('btn-en').classList.add('active');
+    }
+</script>
+
+</body>
+</html>
